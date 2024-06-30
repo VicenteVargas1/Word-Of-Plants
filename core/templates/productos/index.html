@@ -1,0 +1,317 @@
+{% extends 'base.html' %} 
+{% block title %}Productos - TechPlanet {% endblock title %} 
+{% load static %} 
+{% block content %}
+<div class="container">
+  <h1>Todos los Productos</h1>
+  <!-- Botones de filtro por categoría -->
+  <div class="text-center mb-4">
+    <button class="btn btn-primary mx-2" onclick="filterProducts('todos')">
+      Todos
+    </button>
+    <button class="btn btn-primary mx-2" onclick="filterProducts('Maceteros')">
+      Maceteros
+    </button>
+    <button class="btn btn-primary mx-2" onclick="filterProducts('Flores')">
+      Flores
+    </button>
+    <button class="btn btn-primary mx-2" onclick="filterProducts('Arbustos')">
+      Arbustos
+    </button>
+    <button
+      class="btn btn-primary mx-2"
+      onclick="filterProducts('Tierra de hojas')"
+    >
+      Maseteros
+    </button>
+    <div class="product-grid">
+      <!--Categoria de Maceteros -->
+
+      <div class="product" data-category="Maceteros">
+        <img
+          src="productos/Maceteros/rojo-2-100x100.webp"
+          alt="Macetero pequeño PEYU"
+        />
+        <h2>Macetero pequeño PEYU</h2>
+        <p>$10.000</p>
+        <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Maceteros">
+        <img
+          src="productos/Maceteros/celeste-1-100x100.webp"
+          alt="Macetero pequeño PEYU"
+        />
+        <h2>Macetero pequeño PEYU</h2>
+        <p>$10.000</p>
+        <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Maceteros">
+        <img src="productos/Maceteros/chono blanco.webp" alt="Chono Blanco" />
+        <h2>Chono Blanco (Mediano)</h2>
+        <p>$35.000</p>
+        <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Maceteros">
+        <img
+          src="productos/Maceteros/chono grafito.webp"
+          alt="Chono Grafito "
+        />
+        <h2>Chono Grafito (Mediano)</h2>
+        <p>$35.000</p>
+        <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Maceteros">
+        <img
+          src="productos/Maceteros/Marruecos blanco.webp"
+          alt="Marruecos Blanco"
+        />
+        <h2>Marruecos Blanco</h2>
+        <p>$45.000</p>
+        <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Maceteros">
+        <img
+          src="productos/Maceteros/Marruecos negro.webp"
+          alt="Marruecos Negro"
+        />
+        <h2>Marruecos Negro</h2>
+        <p>$45.000</p>
+        <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <!--Categoria de Flores -->
+
+      <div class="product" data-category="Flores">
+        <img
+          src="productos/Flores/ALSTROEMERIA AMARILLO.webp"
+          alt="ALSTROEMERIA AMARILLO"
+        />
+        <h2>ALSTROEMERIA AMARILLO</h2>
+        <p>$267.990</p>
+        <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Flores">
+        <img
+          src="productos/Flores/ALSTROEMERIA MORADO.webp"
+          alt="ALSTROEMERIA MORADO"
+        />
+        <h2>ALSTROEMERIA MORADO</h2>
+        <p>$752.590</p>
+        <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Flores">
+        <img
+          src="productos/Flores/ALSTROEMERIA NARANJO.webp"
+          alt="ALSTROEMERIA NARANJO"
+        />
+        <h2>ALSTROEMERIA NARANJO</h2>
+        <p>$162.990</p>
+        <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Flores">
+        <img
+          src="productos/Flores/LILIUM ASIÁTICO NARANJO.webp"
+          alt="LILIUM ASIÁTICO NARANJO"
+        />
+        <h2>LILIUM ASIÁTICO NARANJO</h2>
+        <p>$329.890</p>
+        <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Flores">
+        <img
+          src="productos/Flores/MINI ROSA FUCSIA.webp"
+          alt="MINI ROSA FUCSIA"
+        />
+        <h2>MINI ROSA FUCSIA</h2>
+        <p>$242.290</p>
+        <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Flores">
+        <img src="productos/Flores/ROSA BLANCA.webp" alt="ROSA BLANCA" />
+        <h2>ROSA BLANCA</h2>
+        <p>$793.790</p>
+        <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <!--Categoria Arbustos-->
+
+      <div class="product" data-category="Arbustos">
+        <img src="productos/Arbustos/Lavanda.png" alt="Lavanda" />
+        <h2>Lavanda</h2>
+        <p>$29.890</p>
+        <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Arbustos">
+        <img src="productos/Arbustos/Rhus crenata.png" alt="Rhus crenata" />
+        <h2>Rhus crenata</h2>
+        <p>$56.690</p>
+        <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Arbustos">
+        <img
+          src="productos/Arbustos/Pitosporo tobira enano.png"
+          alt="Pitosporo tobira enano"
+        />
+        <h2>Pitosporo tobira enano</h2>
+        <p>$102.405</p>
+        <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Arbustos">
+        <img
+          src="productos/Arbustos/Salvia leucantha.png"
+          alt="Salvia leucantha"
+        />
+        <h2>Salvia leucantha</h2>
+        <p>$38.190</p>
+        <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Arbustos">
+        <img
+          src="productos/Arbustos/Westringia Fruticosa.png"
+          alt="Westringia Fruticosa"
+        />
+        <h2>Westringia Fruticosa</h2>
+        <p>$81.390</p>
+        <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Arbustos">
+        <img
+          src="productos/Arbustos/Santolina chamaecyparissus..png"
+          alt="Santolina chamaecyparissus"
+        />
+        <h2>Santolina chamaecyparissus</h2>
+        <p>$165.090</p>
+        <button onclick="addToCart('Producto 2', 200000, 'producto2.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <!--Categoria Tierra de hojas-->
+
+      <div class="product" data-category="Tierra de hojas">
+        <img
+          src="productos/Tierra de hojas/Pack Tierra Vegetal (5 unidades).jpg"
+          alt="Pack Tierra Vegetal (5 unidades)"
+        />
+        <h2>Pack Tierra Vegetal (5 unidades)</h2>
+        <p>$76.000</p>
+        <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Tierra de hojas">
+        <img
+          src="productos/Tierra de hojas/Tierra Acida.jpg"
+          alt="Tierra Acida"
+        />
+        <h2>Tierra Acida</h2>
+        <p>$15.000</p>
+        <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Tierra de hojas">
+        <img
+          src="productos/Tierra de hojas/Tierra de Diatomeas.jpg"
+          alt="Tierra de Diatomeas"
+        />
+        <h2>Tierra de Diatomeas</h2>
+        <p>$25.000</p>
+        <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Tierra de hojas">
+        <img
+          src="productos/Tierra de hojas/Tierra de Hojas.jpg"
+          alt="Tierra de Hojas"
+        />
+        <h2>Tierra de Hojas</h2>
+        <p>$50.000</p>
+        <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Tierra de hojas">
+        <img
+          src="productos/Tierra de hojas/PACK TIERRA DE HOJAS.webp"
+          alt="PACK TIERRA DE HOJAS"
+        />
+        <h2>PACK TIERRA DE HOJAS</h2>
+        <p>$35.000</p>
+        <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+
+      <div class="product" data-category="Tierra de hojas">
+        <img
+          src="productos/Tierra de hojas/Tierra de Hoja Reforzada y Desinfectada.webp"
+          alt="Tierra de Hoja Reforzada y Desinfectada"
+        />
+        <h2>Tierra de Hoja Reforzada y Desinfectada</h2>
+        <p>$45.000</p>
+        <button onclick="addToCart('Producto 1', 100000, 'producto1.jpg')">
+          Agregar al Carrito
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% block js %}
+{% endblock js %}
+{% endblock content %}
